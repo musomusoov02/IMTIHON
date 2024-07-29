@@ -26,6 +26,7 @@ namespace IMTIHON
         }
 
 
+
         static void Main(string[] args)
         {
             RestoranServis restoranServis = new RestoranServis();
@@ -41,6 +42,9 @@ namespace IMTIHON
              {
                  "RestoranHaqida",
                  "Kategoriyalar Menyusi",
+                 "Product Menyusi",
+                 "Kategororiyaga Productni qo'shish",
+                 "List Kategoriya and Products",
                  "Buyurtmalar",
                  "back"
              };
@@ -62,6 +66,17 @@ namespace IMTIHON
                  "clear kategoriya",
                  "back"
              };
+
+            List<string> Product = new List<string>()
+             {
+                 "Add Product",
+                 "Update Product",
+                 "Delete Product",
+                 "List Product",
+                 "clear Product",
+                 "back"
+             };
+
             List<string> buyurtma = new List<string>()
              {
                  "Buyurtmalar",
@@ -158,8 +173,57 @@ namespace IMTIHON
                             }
                             break;
 
-
                         case 2:
+                        pro:
+                             int pro = ArrowIndex(Product, "admin");
+                            switch (pro)
+                            {
+                                ///------product
+                                case 0:
+                                    restoranServis.AddProduct();
+                                    Console.ReadKey();
+                                    goto pro;
+
+                                case 1:
+                                    restoranServis.UpdateProduct();
+                                    Console.ReadKey();
+                                    goto pro;
+
+
+                                case 2:
+                                    restoranServis.DeleteProduct();
+                                    Console.ReadKey();
+                                    goto pro;
+
+
+                                case 3:
+                                    restoranServis.ListProduct();
+                                    Console.ReadKey();
+                                    goto pro;
+                                case 4:
+                                    restoranServis.ClearProduct();
+                                    Console.ReadKey();
+                                    goto pro;
+                                case 5:
+
+                                    goto admin;
+
+
+
+                            }
+                            break;
+                        case 3:
+                            //attach
+
+                            restoranServis.Attach();
+                            
+                            Console.ReadKey();
+                            goto admin;
+                        case 4: 
+                            restoranServis.AttachList();
+                            Console.ReadKey();
+                            goto admin;
+                        case 5:
                             bu:
                             int b=ArrowIndex(buyurtma, "admin");
                             switch (b)
@@ -182,7 +246,7 @@ namespace IMTIHON
                             break;
 
 
-                        case 3:
+                        case 6:
                             goto menyu;
                     }
                     break;
