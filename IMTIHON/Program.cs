@@ -148,14 +148,10 @@ namespace IMTIHON
                                     restoranServis.UpdateKategoriya();
                                     Console.ReadKey();
                                     goto kat;
-
-
                                 case 2:
                                     restoranServis.DeleteKategoriya();
                                     Console.ReadKey();
                                     goto kat;
-
-
                                 case 3:
                                     restoranServis.ListKategoriya();
                                     Console.ReadKey();
@@ -167,9 +163,6 @@ namespace IMTIHON
                                 case 5:
 
                                     goto admin;
-
-
-
                             }
                             break;
 

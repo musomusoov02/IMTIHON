@@ -157,17 +157,13 @@ namespace IMTIHON
         }
 
 
+
+
         Dictionary<string, List<string>> buyurtmalars = new Dictionary<string, List<string>>();
         List<Kategoriyalar> kategoriyalars= new List<Kategoriyalar>();
         List<RestoranHaqida> restoranHaqidas= new List<RestoranHaqida>();
         List<Product> products= new List<Product>();
-        List<Attach> attaches= new List<Attach>();
         Dictionary<string,List<string>> DicAttach= new Dictionary<string,List<string>>();
-
-
-
-
-
 
 
 
@@ -214,7 +210,6 @@ namespace IMTIHON
                 return;
             }
 
-            var birxil = attaches.FirstOrDefault(i=>i.NameKategoriya==idKate.Name);
 
             if (DicAttach.ContainsKey(idKate.Name))
             {
