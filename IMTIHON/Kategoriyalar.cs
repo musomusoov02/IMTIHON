@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace IMTIHON;
 
-namespace IMTIHON
+public class Kategoriyalar
 {
-    public class Kategoriyalar
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-
-    }
+    public int Id { get; set; }
+    public string Name { get; set; }
 }

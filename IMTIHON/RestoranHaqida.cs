@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace IMTIHON;
 
-namespace IMTIHON
+public class RestoranHaqida
 {
-    public class RestoranHaqida
-    {
-        public int id { get; set; }
-        public string Name { get; set; }
-    }
+    public int id { get; set; }
+    public string Name { get; set; }
 }
